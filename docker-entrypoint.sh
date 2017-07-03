@@ -50,6 +50,7 @@ if [[ -n "$AWS_ENDPOINT" ]]; then sed -i -e "s^aws.endpoint=.*$^aws.endpoint=${A
 if [[ -n "$KAFKA_SEED_BROKER_HOST" ]]; then sed -i -e "s/kafka.seed.broker.host=.*$/kafka.seed.broker.host=${KAFKA_SEED_BROKER_HOST}/" $SECOR_CONFIG_FILE ; fi
 if [[ -n "$KAFKA_SEED_BROKER_PORT" ]]; then sed -i -e "s/kafka.seed.broker.port=.*$/kafka.seed.broker.port=${KAFKA_SEED_BROKER_PORT}/" $SECOR_CONFIG_FILE ; fi
 if [[ -n "$ZOOKEEPER_QUORUM" ]]; then sed -i -e "s/zookeeper.quorum=.*$/zookeeper.quorum=${ZOOKEEPER_QUORUM}/" $SECOR_CONFIG_FILE ; fi
+if [[ -n "$KAFKA_ZOOKEEPER_PATH" ]]; then sed -i -e "s^kafka.zookeeper.path=.*$^kafka.zookeeper.path=${KAFKA_ZOOKEEPER_PATH}^" $SECOR_CONFIG_FILE ; fi
 
 # Where to store things in S3 and locally within the container
 sed -i -e "s/secor.s3.bucket=.*$/secor.s3.bucket=${SECOR_S3_BUCKET}/" $SECOR_CONFIG_FILE
