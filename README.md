@@ -71,6 +71,7 @@ Environment Variable Name           | Required? | Purpose
 `SECOR_OFFSETS_PER_PARTITION`       | **No**    | How many offsets should be stored within a backed up partition? (defaults to: `10000000`)
 `KAFKA_OFFSETS_STORAGE`             | **No**    | Should offsets be stored in Kafka or ZooKeeper? (defaults to: `kafka`)
 `KAFKA_DUAL_COMMIT_ENABLED`         | **No**    | Should Secor commit processed offsets to Kafak AND ZooKeeper? (defaults to: `false`)
+`KAFKA_ZOOKEEPER_PATH`              | **No**    | Zookeeper path at which kafka is registered. In Zookeeper parlance, this is referred to as the chroot.
 `SECOR_OSTRICH_PORT`                | **No**    | What port should Ostrich data be sent on (defaults to: `9999`)
 
 
